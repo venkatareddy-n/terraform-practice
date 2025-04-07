@@ -9,3 +9,9 @@ instance_type="t2.small"
 3rd preferance is environment variables
 define env variable
 export TF_VAR_instance_type="t2.small"
+
+4th Preference is default
+	variable "instance_type" {
+		type    = string
+		default = "t3.micro"
+    }

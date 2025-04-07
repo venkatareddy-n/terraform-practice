@@ -10,7 +10,6 @@ terraform {
     }
   }
 
-  # old method
   backend "s3" {
     bucket         = "venkat-swan" #S3 Bucket Name
     key            = "ec2-s3-key"
@@ -18,11 +17,4 @@ terraform {
     dynamodb_table = "venkat-db" # Dynamo DB Table Name
   }
 
-  # # new method
-  # backend "s3" {
-  #   bucket       = "venkat-swan"
-  #   key          = "ec2-s3-key"
-  #   region       = "us-east-1"
-  #   use_lockfile = true # Simple and built-in!
-  # }
 }
