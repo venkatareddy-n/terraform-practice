@@ -13,7 +13,7 @@ resource "aws_security_group" "allow_ports" {
   dynamic "ingress" {
     for_each = var.ingress_ports
     content {
-      from_port   = ingress.value["from_port"] # you can use this war or below way also to get valuse
+      from_port   = ingress.value["from_port"] # you can use this way or below way also to get values
       to_port     = ingress.value.to_port      # 2nd way to get value
       protocol    = ingress.value["protocol"]
       cidr_blocks = ingress.value["cidr_blocks"]

@@ -4,16 +4,13 @@ resource "aws_instance" "terraform_server" {
   vpc_security_group_ids = [aws_security_group.allow_ssh.id]
   
   count = length(var.instance_names)
-  #  tags = {
-  #       Name = var.instance_names[count.index]
-  #   }
-
+     
      tags = merge(
         var.common_tags,
         {
             Name = var.instance_names[count.index]
         }
-    )
+      )
 }
 
 resource "aws_security_group" "allow_ssh" {

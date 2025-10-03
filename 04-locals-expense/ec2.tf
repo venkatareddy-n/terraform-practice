@@ -1,6 +1,6 @@
 resource "aws_instance" "expense" {
   ami                    = data.aws_ami.devops_ami.id
-  instance_type          = var.instance_names[count.index] == "mysql" ? "t3.small" : "t3.micro"
+  instance_type          = local.instance_type
   vpc_security_group_ids = [aws_security_group.allow_ssh.id]
   count                  = length(var.instance_names)
 

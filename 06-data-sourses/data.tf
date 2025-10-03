@@ -9,5 +9,4 @@ data "aws_ami" "vs-devops" {
     name   = "name"
     values = ["RHEL-9-DevOps-Practice"]
   }
-
 }

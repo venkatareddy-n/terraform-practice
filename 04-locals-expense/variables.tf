@@ -4,11 +4,17 @@ variable "instance_names" {
   description = "these are variables for instances"
 }
 
-variable "zone_id" {
-  default = "Z04310266RYXPYRYCYZF"
+variable "environment" {
+  type        = string
+  default     = "prod"
 }
 
-variable "domain_name" {
-  default = "venkatswan.online"
-}
+
+# variable "zone_id" {
+#   default = "Z04310266RYXPYRYCYZF"
+# }
+
+# variable "domain_name" {
+#   default = "venkatswan.online"
+# }
 
