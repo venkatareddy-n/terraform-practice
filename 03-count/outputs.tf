@@ -10,7 +10,7 @@ output "public_ip_address" {
   description = "The public IP address of the main server instance."
 }
 
-output "public_ip_address" {
-  value       = aws_instance.terraform_server[1].public_ip
+output "private_ip_address" {
+  value       = aws_instance.terraform_server[1].private_ip
   description = "The public IP address of the main server instance."
 }
