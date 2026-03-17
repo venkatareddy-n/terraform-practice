@@ -11,7 +11,7 @@ resource "aws_instance" "terraform_server" {
     command = "echo  ${self.public_ip} > public_ip.out"
   }
 
-   provisioner "local-exec" {
+  provisioner "local-exec" {
     command = "echo  ${self.private_ip} > private_ip.out"
   }
 
