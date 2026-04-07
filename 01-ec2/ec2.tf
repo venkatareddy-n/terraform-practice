@@ -3,7 +3,7 @@ resource "aws_instance" "terraform_server" {
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.allow_ssh.id]
   tags = {
-    Name = "01-ec2"
+    Name = "01-ec2-server"
   }
 }
 
